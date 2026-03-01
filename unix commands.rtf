@@ -1,0 +1,141 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 .SFNS-Regular;\f2\fnil\fcharset0 HelveticaNeue-Bold;
+\f3\fnil\fcharset0 .AppleSystemUIFontMonospaced-Regular;\f4\fnil\fcharset0 .SFNS-Semibold;\f5\fnil\fcharset0 .SFNS-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red14\green14\blue14;\red14\green14\blue14;\red0\green0\blue0;
+\red14\green14\blue14;}
+{\*\expandedcolortbl;;\cssrgb\c6707\c6707\c6699;\cssrgb\c6700\c6700\c6700;\cssrgb\c0\c1\c1;
+\cssrgb\c6715\c6715\c6698;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16020\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ls -l     # long listing format\
+ls -a     # show hidden files\
+ls -lh    # long format with human-readable size\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\fs48 \cf2 \ul \ulc2 Searches for a pattern inside a file:
+\fs32 \cf3 \ulnone -\
+\
+grep -n "main" program.c   (Searches for the word 
+\f2\b \cf3 main
+\f1\b0 \cf3  inside 
+\f3 \cf3 program.c)
+\f1 \cf3 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f4\b\fs38 \cf2 \ul \ulc2 Command with Pipe (|)\cf3 \ulnone :-\
+\pard\tx860\tx1420\tx1980\tx2540\tx3100\tx3660\tx4220\tx4780\tx5340\tx5900\tx6460\tx7020\li300\sl324\slmult1\partightenfactor0
+
+\f1\b0\fs32 \cf3 A pipe (
+\f3 |
+\f1 ) connects two commands. The output of the first command becomes the input of the second command.
+\f4\b\fs38 \cf3 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+\cf3 ls -l | grep ".txt"\cf4 \
+ps -ef | grep java\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\fs48 \cf2 \ul \ulc2 Output Redirection (>)\cf3 \ulnone :-\
+
+\fs24 ls > files.txt\
+date >> files.txt\
+wc < files.txt (
+\fs48 I\cf2 \ul \ulc2 nput Redirection (<)\cf3 \ulnone )\
+\cf2 \ul \ulc2 demo;-\
+
+\f1\b0\fs28 \cf5 \ulnone echo "Hello MCA" > lab.txt\
+cat lab.txt
+\f4\b\fs48 \cf3 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f5 \cf2 \ul \ulc2 Creates a new empty file
+\f1\b0\fs32 \cf3 \ulnone .:-\
+touch file1.txt\
+cat file1.txt\
+cp file1.txt copy.txt\
+mv copy.txt newfile.txt\
+rm newfile.txt\
+\
+
+\f5\b\fs48 \cf2 \ul \ulc2 MORE BASIC COMMANDS:-
+\f4 \cf3 \ulnone \
+
+\fs36 whoami  (
+\f1\b0\fs32 \cf3 Displays the current logged-in username.)\
+who  (Shows all users currently logged into the system.)\
+date\
+cal\
+cal 2026\
+wc file.txt (word count)\
+wc -l file.txt (
+\f4\b\fs34 \cf3 Only lines)\
+sort file.txt (
+\f1\b0\fs32 \cf3 Sorts lines alphabetically)\
+head file.txt (first 10 line)\
+tail file.txt (last 10)\
+
+\f4\b\fs36 \cf3 man ls (
+\f1\b0\fs32 \cf3 Shows help/manual of a command.)\
+\
+
+\f5\b\fs48 \cf2 \ul \ulc2 DEMO:-\
+
+\f1\b0\fs36 \cf5 \ulnone echo "MCA Lab" > test.txt\
+wc -l test.txt\
+cat test.txt
+\f4\b\fs48 \cf2 \ul \ulc2 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+\cf2 \ulc2 Change File Permissions:-\
+\
+
+\f1\b0\fs28 \cf5 \ulnone chmod 755 file.sh (
+\f3\fs32 \cf3 7
+\f1 \cf3  \uc0\u8594  Read + Write + Execute , 
+\f3 \cf3 5
+\f1 \cf3  \uc0\u8594  Read + Execute)\
+ps (Shows running processes.)\
+ps -ef(
+\f4\b\fs34 \cf3  Detailed)\
+\
+kill 1234(
+\f1\b0\fs32 \cf3 Stops a running process)\
+\
+df -h (Shows disk space usage , 
+\f3 \cf3 -h
+\f1 \cf3  \uc0\u8594  human readable format)\
+du -sh foldername (Shows directory/file size.)\
+find . -name "file.txt\'94(Search file in directory.)\
+\
+
+\f4\b\fs48 \cf2 \ul \ulc2 Pattern Scanning & Processing:-\
+\
+
+\f1\b0\fs28 \cf5 \ulc5 awk '\{print $1\}' file.txt\cf5 \ulnone   (
+\fs32 \cf3 Prints 
+\f2\b \cf3 first column
+\f1\b0 \cf3  of file)\
+sed 's/old/new/' file.txt. ( Used to replace or edit text in a file.)\
+uname -a (Displays system details.)\
+crontab -e (
+\f4\b\fs48 \cf3 Schedule Tasks)\
+
+\fs28 0 9 * * * echo "Good Morning\'94(
+\f1\b0\fs32 \cf3 Runs daily at 9 AM.)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f5\b\fs48 \cf2 \ul \ulc2 DEMO;-\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl324\slmult1\pardirnatural\partightenfactor0
+
+\f1\b0\fs28 \cf5 \ulc5 mkdir MCA\
+cd MCA\
+touch file1.txt\
+echo "Hello MCA" > file1.txt\
+cat file1.txt\
+wc -w file1.txt}
